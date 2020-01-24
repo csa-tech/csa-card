@@ -1,11 +1,15 @@
 <!--miniprogram/pages/visit/visit.wxml-->
 
+
 <view class="container">
   <view>
     <text>扫描店内二维码\n使用CSA Membership Card</text>
   </view>
   <view class="scan">
   <image></image>
+
+  <button style="margin-top:50px;" bindtap="getQRCode">扫一扫</button>
   </view>
 
 </view>
+

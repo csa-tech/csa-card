@@ -4,7 +4,6 @@
     "pages/visit/visit",
     "pages/activate/activate",
     "pages/card/card"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",
