@@ -1,2 +1,4 @@
 <!--miniprogram/pages/visit/visit.wxml-->
-<text>miniprogram/pages/visit/visit.wxml</text>
+
+<!--test.wxml-->
+<button style="margin-top:50px;" bindtap="getQRCode">扫一扫</button>
