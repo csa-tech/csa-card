@@ -1,1 +1,22 @@
-/* miniprogram/pages/activate/activate.wxss */
+/**index.wxss**/
+.userRegistra{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  height: 50rpx;
+ 
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  text-align: center;
+}
+.input{
+  margin-top:20rpx;
+  margin-bottom: 20rpx;
+  width: 500rpx;
+  height: 100rpx; 
+  border: 1rpx solid lightgray;
+}

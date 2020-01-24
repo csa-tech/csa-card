@@ -1,2 +1,17 @@
-<!--miniprogram/pages/activate/activate.wxml-->
-<text>miniprogram/pages/activate/activate.wxml</text>
+<!--activate.wxml-->
+<view class="container">
+  <view class="userRegistra">
+    <text>输入六位兑换码
+          领取CSA Membership Card
+          领取后该Membership Card
+          将与当前微信号绑定
+    </text>
+    <view>
+      <input class="input" type="number" name="cardNum" bindinput="cardNumInput">      </input>
+    </view>
+    <view>
+      <button class="register" bindtap="registerOnClick"> 绑 定 </button>
+    </view>
+  </view>
+  
+</view>

@@ -1,2 +1,11 @@
 <!--miniprogram/pages/visit/visit.wxml-->
-<text>miniprogram/pages/visit/visit.wxml</text>
+
+<view class="container">
+  <view>
+    <text>扫描店内二维码\n使用CSA Membership Card</text>
+  </view>
+  <view class="scan">
+  <image></image>
+  </view>
+
+</view>

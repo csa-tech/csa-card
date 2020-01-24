@@ -1,17 +1,17 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/visit/visit",
     "pages/activate/activate",
-    "pages/card/card",
-    "pages/visit/visit"
+    "pages/card/card"
+    
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
 }
