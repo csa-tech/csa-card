@@ -12,5 +12,9 @@ App({
     }
 
     this.globalData = {}
+
+    wx.navigateTo({
+      url: '/pages/pg/pg',
+    })
   }
 })
