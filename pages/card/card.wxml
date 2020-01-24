@@ -1,0 +1,9 @@
+<!--pages/card/card.wxml-->
+<view class="container">
+  <view>
+  <text>您的CSA Membership Card</text>
+  </view>
+  <view class="card">
+  <image></image>
+  </view>
+</view>
