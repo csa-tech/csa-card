@@ -64,3 +64,27 @@ Page({
 
   }
 })
+
+
+Page({
+  Scan: function() {
+    wx.cloud.init({
+      env:"test1"
+    })
+    const db = wx.cloud.database()
+    db.collection("activation").get({
+      success: function(res) {
+        if (res.data.length == 0) {
+          //TODO: redirect -> activate
+        } else {
+          //TODO: redirect -> visit
+        }
+        console.log(res.data)
+      },
+      fail: function(res) {
+        console.log(res.data)
+      } 
+      
+    })
+  }
+})
