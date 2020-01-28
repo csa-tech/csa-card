@@ -62,29 +62,38 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
-})
+  },
 
-
-Page({
-  Scan: function() {
+  Enter: function () {
     wx.cloud.init({
-      env:"test1"
+      env: "test1"
     })
     const db = wx.cloud.database()
     db.collection("activation").get({
-      success: function(res) {
+      success: function (res) {
         if (res.data.length == 0) {
           //TODO: redirect -> activate
+          wx.redirectTo({
+            url: '/pages/activate/activate',
+            success: function(res) {},
+            fail: function(res) {},
+            complete: function(res) {},
+          })
         } else {
           //TODO: redirect -> visit
+          wx.redirectTo({
+            url: '/pages/visit/visit',
+            success: function (res) { },
+            fail: function (res) { },
+            complete: function (res) { },
+          })
         }
         console.log(res.data)
       },
-      fail: function(res) {
+      fail: function (res) {
         console.log(res.data)
-      } 
-      
+      }
+
     })
   }
 })

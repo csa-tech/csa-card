@@ -81,19 +81,19 @@ Page({
             visit_date: new Date(),
             merchant: res.result
           },
-          success: console.log,
-          fail: console.log,
-        });
+          success: function(res) {
+            // 显示成功
+            wx.showToast({
+              title: '成功',
+              duration: 2000
+            });
 
-        // 显示成功
-        wx.showToast({
-          title: '成功',
-          duration: 2000
-        });
-        
-        // 跳转到card 页面
-        wx.navigateTo({
-          url: '../card/card.wxml'
+            // 跳转到card 页面
+            wx.navigateTo({
+              url: '/pages/card/card'
+            });
+          },
+          fail: console.log,
         });
       }
     })
