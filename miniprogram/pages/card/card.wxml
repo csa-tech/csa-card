@@ -4,6 +4,7 @@
   <text>您的CSA Membership Card</text>
   </view>
   <view class="card">
-  <image></image>
+  <image scr="/resources/滑稽表情.jpg"></image>
   </view>
 </view>
+
