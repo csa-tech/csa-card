@@ -75,6 +75,11 @@ Page({
           qRCodeMsg: res.result
         });
 
+        // 跳转到card 页面
+        wx.navigateTo({
+          url: '/pages/card/card'
+        });
+        
         // 把1. 时间 2. 商店名字 存入数据库 view
         db.collection('visit').add({
           data: {
@@ -88,10 +93,6 @@ Page({
               duration: 2000
             });
 
-            // 跳转到card 页面
-            wx.navigateTo({
-              url: '/pages/card/card'
-            });
           },
           fail: console.log,
         });

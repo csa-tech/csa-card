@@ -65,27 +65,16 @@ Page({
   },
 
   Enter: function () {
-    wx.cloud.init({
-      env: "test1"
-    })
     const db = wx.cloud.database()
     db.collection("activation").get({
       success: function (res) {
         if (res.data.length == 0) {
-          //TODO: redirect -> activate
           wx.redirectTo({
-            url: '/pages/activate/activate',
-            success: function(res) {},
-            fail: function(res) {},
-            complete: function(res) {},
+            url: '/pages/activate/activate'
           })
         } else {
-          //TODO: redirect -> visit
           wx.redirectTo({
-            url: '/pages/visit/visit',
-            success: function (res) { },
-            fail: function (res) { },
-            complete: function (res) { },
+            url: '/pages/visit/visit'
           })
         }
         console.log(res.data)
