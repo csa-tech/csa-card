@@ -1,17 +1,52 @@
 /* pages/card/card.wxss */
+/* .container{
+  height: 100%;
+  background: url('/resources/buddhaBowl.jpeg') no-repeat;
+  background-size: 100% 100%;
+} */
 page{
   height:100%
 }
 
-.card{
-  display:flex;
+.full{
+  display: flex;
   height: 100%;
+  width:100%;
   justify-content: center;
   align-items:center;
 }
 
-.card image {
-  width: 400px;
-  height: 400px;
+.background{
+  height: 100%;
+  width:100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+
+
+.card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  justify-content: center;
+  align-items:center;
+}
+
+.cardAndNum{
+  width:100%;
+  position: relative;
+}
+
+.c {
+  width: 100%
+}
+.num{
+  position: absolute;
+  bottom: 23px;
+  right: 20px;
+  font-size: 13px;
+
 }
 

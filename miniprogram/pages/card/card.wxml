@@ -1,10 +1,12 @@
 <!--pages/card/card.wxml-->
-<view class="container">
-  <view>
-  <text>您的CSA Membership Card</text>
-  </view>
+<view class="full">
+  <image class="background" src="/resources/buddhaBowl.jpeg" mode="aspectFill"></image>
   <view class="card">
-  <image scr="/resources/滑稽表情.jpg"></image>
+    <text>您的CSA Membership Card</text>
+    <view class ="cardAndNum">
+      <image class="c" mode='widthFix' src="/resources/CSAcard.jpeg"></image>
+      <view class="num">678875567</view>
+    </view>
   </view>
 </view>
 
