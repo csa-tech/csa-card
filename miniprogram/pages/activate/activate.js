@@ -11,8 +11,13 @@ Page({
       cardNum: e.detail.value
     })
   },
+
   registerOnClick: function (e) {
     console.log("card number: " + this.data.cardNum),
     console.log(e)
+    wx.setStorage({
+      key: 'card number',
+      data: this.data.cardNum
+    })
   }
 })

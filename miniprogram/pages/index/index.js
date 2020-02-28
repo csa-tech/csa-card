@@ -65,24 +65,42 @@ Page({
   },
 
   Enter: function () {
-    const db = wx.cloud.database()
-    db.collection("activation").get({
-      success: function (res) {
-        if (res.data.length == 0) {
-          wx.redirectTo({
-            url: '/pages/activate/activate'
-          })
-        } else {
-          wx.redirectTo({
-            url: '/pages/visit/visit'
-          })
-        }
-        console.log(res.data)
-      },
-      fail: function (res) {
-        console.log(res.data)
-      }
+    try {
+      var value = wx.getStorageSync('card number')
+      if (value) {
+        // Do something with return value
+        wx.redirectTo({
+          url: '/pages/visit/visit'
+        })
+      } else {
+        const db = wx.cloud.database()
+        db.collection("activation").get({
+          success: function (res) {
+            if (res.data.length == 0) {
+              wx.redirectTo({
+                url: '/pages/activate/activate'
+              })
+            } else {
+              wx.setStorage({
+                key: 'card number',
+                data: res.data[0].card_number
+              }),
+              wx.redirectTo({
+                url: '/pages/visit/visit'
+              })
+            }
+            console.log(res.data)
+          },
+          fail: function (res) {
+            console.log(res)
+            console.log(res.data)
+          }
 
-    })
+        })
+      }
+    } catch (e) {
+      // Do something when catch error
+      console.log("Error")
+    }  
   }
 })
